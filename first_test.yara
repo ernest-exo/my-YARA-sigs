@@ -1,4 +1,5 @@
-rule flag_forwards_from hotmail {
+rule flag_forwards_from hotmail 
+{
     meta:
         author = "Ernest-Exo"
         date = "2024-07-17"
