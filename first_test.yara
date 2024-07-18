@@ -1,13 +1,9 @@
-rule FlagForwards 
-{
-    meta:
-        author = "Ernest-Exo"
-        date = "2024-07-17"
-        description = "flag mail in sublime for forwards from my hotmail"
-
-    strings:
-        $return_path = "Return-Path: <ejmcleod88@hotmail.com>"
-
-    condition:
-        $return_path
+rule ExampleRule {
+	meta:
+		author = "EJM"
+		description = "test rule to flag hotmail forwards"
+	strings:
+		$string = "Return-Path: <ejakemcleod88@gmail.com>"
+	condition:
+		all of them
 }
