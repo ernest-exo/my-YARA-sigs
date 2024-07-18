@@ -1,0 +1,14 @@
+rule ExampleRule {
+	meta:
+		author = "EJM"
+		description = "test rule to flag executabl zip files"
+	strings:
+		$zip_magic = { 50 4B 03 04 } //ZIP magic number
+    $exe_extension = ".exe"
+    $bat_extension = ".bat"
+    $vbs_extension = ".vbs"
+	condition:
+		file.extension == "zip" and
+    $zip_magic and
+    ( $exe_extension or $bat_extension or $vbs_extension )
+}
