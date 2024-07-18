@@ -5,5 +5,5 @@ rule ExampleRule {
 	strings:
 		$zip_ext = ".zip" wide ascii
 	condition:
-		$zip_ext at 0
+		all of them
 }
