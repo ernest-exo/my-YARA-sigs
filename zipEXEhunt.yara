@@ -1,9 +1,9 @@
 rule ExampleRule {
 	meta:
 		author = "EJM"
-		description = "test rule to flag executabl zip files"
+		description = "test rule to flag zip files"
 	strings:
-		$zip_magic = ".zip"
+		$zip_ext = ".zip" wide ascii
 	condition:
-		$zip_magic
+		$zip_ext at 0
 }
