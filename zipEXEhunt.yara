@@ -3,7 +3,7 @@ rule ExampleRule {
 		author = "EJM"
 		description = "test rule to flag executabl zip files"
 	strings:
-		$zip_magic = { 50 4B 03 04 } //ZIP magic number
+		$zip_magic = ".zip"
 	condition:
-		all of them
+		$zip_magic
 }
