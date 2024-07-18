@@ -5,5 +5,5 @@ rule ExampleRule {
 	strings:
 		$zip_magic = { 50 4B 03 04 } //ZIP magic number
 	condition:
-		
+		all of them
 }
